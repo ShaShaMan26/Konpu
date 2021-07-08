@@ -10,6 +10,12 @@ namespace Konpu_V1
 {
     class Program
     {
+        public enum Questions
+        {
+            Birthday,
+            Remember,
+            Test
+        }
         public static void ClearCurrentConsoleLine()
         {
             int currentLineCursor = Console.CursorTop;
@@ -20,6 +26,7 @@ namespace Konpu_V1
         static void Main(string[] args)
         {
             int userAge = 0;
+            int time = 0;
             string userAgeS = "null";
             string userName = "User";
             string userBday = "null";
@@ -27,52 +34,49 @@ namespace Konpu_V1
             bool userHasEnteredName = false;
             bool userHasMeetKonpyu = false;
             bool userHasEnteredBday = false;
-            int time = 0;
-
-            string konOSLogo1 = " __  ___        __   __   _______    _______";
-            string konOSLogo2 = "|  |/  /       |  \\ |  | /  ___  \\  /   ____|";
-            string konOSLogo3 = "|  '  /  ____  |   \\|  ||  |   |  ||   (____";
-            string konOSLogo4 = "|    <  / __ \\ |  . `  ||  |   |  | \\____   \\ ";
-            string konOSLogo5 = "|  .  \\| (__) ||  |\\   ||  |___|  |  ____)   |";
-            string konOSLogo6 = "|__|\\__\\\\____/ |__| \\__| \\_______/  |_______/ ";
+            bool remember = false;
+            bool userHasAskedName = false;
+            bool q3 = false;
+            
             string konpyuLogo1 = "  :::::::: :::::      ::   :/:^0";
             string konpyuLogo2 = "      :+:       :/:  :+:+:+:  :+:+:  _____";
             string konpyuLogo3 = "     +:+       +/+  +:+         +/+";
             string konpyuLogo4 = "#+#+#+#  #+#+#+#  #+#+#+#+#  #+#+#+#";
 
-            foreach (char c in konOSLogo1)
+            
+            foreach (char c in " __  ___        __   __   _______    _______")
             {
                 Console.Write(c);
                 Thread.Sleep(10);
             }
             Console.WriteLine();
-            foreach (char c in konOSLogo2)
+            foreach (char c in "|  |/  /       |  \\ |  | /  ___  \\  /   ____|")
             {
                 Console.Write(c);
                 Thread.Sleep(50);
             }
             Console.WriteLine();
-            foreach (char c in konOSLogo3)
+            foreach (char c in "|  '  /  ____  |   \\|  ||  |   |  ||   (____")
             {
                 Console.Write(c);
                 Thread.Sleep(0);
             }
             Console.WriteLine();
             Thread.Sleep(1000);
-            foreach (char c in konOSLogo4)
+            foreach (char c in "|    <  / __ \\ |  . `  ||  |   |  | \\____   \\ ")
             {
                 Console.Write(c);
                 Thread.Sleep(0);
             }
             Console.WriteLine();
             Thread.Sleep(250);
-            foreach (char c in konOSLogo5)
+            foreach (char c in "|  .  \\| (__) ||  |\\   ||  |___|  |  ____)   |")
             {
                 Console.Write(c);
                 Thread.Sleep(0);
             }
             Console.WriteLine();
-            foreach (char c in konOSLogo6)
+            foreach (char c in "|__|\\__\\\\____/ |__| \\__| \\_______/  |_______/ ")
             {
                 Console.Write(c);
                 Thread.Sleep(5);
@@ -83,8 +87,19 @@ namespace Konpu_V1
             {
                 Thread.Sleep(2000);
                 Console.WriteLine();
-                Console.WriteLine("Ask me a question. *Please don't capitalize any words besides proper nouns and place a '?' at the end of questions*");
-                string userQuestion = Console.ReadLine();
+                foreach(char c in "Ask me a question.")
+                {
+                    Console.Write(c);
+                    Thread.Sleep(10);
+                }
+                Thread.Sleep(500);
+                foreach(char c in " *Please remember to place a \"?\" at the end of questions*")
+                {
+                    Console.Write(c);
+                    Thread.Sleep(10);
+                }
+                Console.WriteLine();
+                string userQuestion = Console.ReadLine().ToLower();
                 switch (userQuestion)
                 {
                     case "can you tell me my age in dog years?":
@@ -96,12 +111,12 @@ namespace Konpu_V1
                             Console.WriteLine("How old are you?");
                             userAgeS = Console.ReadLine();
                             userHasEnteredAge = true;
-                            userAge = Int32.Parse(userAgeS)/7;
-                            Console.WriteLine(userName + "'s age in dog years is " + userAge + ".");
+                            userAge = Int32.Parse(userAgeS)*7;
+                            Console.WriteLine($"{userName}'s age in dog years is {userAge}.");
                         }
                         else if (userHasEnteredAge == true)
                         {
-                            Console.WriteLine("Once again..." + userName + "'s age in dog years is " + userAge + ".");
+                            Console.WriteLine($"Once again... {userName}'s age in dog years is {userAge}.");
                         }continue;
 
                     case "what is my name?":
@@ -112,11 +127,16 @@ namespace Konpu_V1
                             Console.WriteLine("I'm not sure... What is your name?");
                             userName = Console.ReadLine();
                             userHasEnteredName = true;
-                            Console.WriteLine("Thank you " + userName + ", I will remember that.");
+                            Console.WriteLine($"Thank you {userName}, I will remember that.");
                         }
-                        else if (userHasEnteredName == true)
+                        else if (userHasEnteredName == true && userHasAskedName == false)
                         {
-                            Console.WriteLine("Once again... User name is " + userName + ".");
+                            Console.WriteLine($"User name is {userName}.");
+                            userHasAskedName = true;
+                        }
+                        else
+                        {
+                            Console.WriteLine($"Once again, your name is {userName}.");
                         }continue;
 
                     case "what do you know?":
@@ -232,45 +252,168 @@ namespace Konpu_V1
                         continue;
                     
                     case "clear":
-                        Console.SetCursorPosition(0, Console.CursorTop - 2);
+                        Console.SetCursorPosition(0, Console.CursorTop - 1);
+                        ClearCurrentConsoleLine();
+                        Console.SetCursorPosition(0, Console.CursorTop - 1);
+                        ClearCurrentConsoleLine();
+                        Console.SetCursorPosition(0, Console.CursorTop - 1);
+                        ClearCurrentConsoleLine();
+                        Console.SetCursorPosition(0, Console.CursorTop - 1);
                         ClearCurrentConsoleLine();
                         continue;
+                    
                     case "ask me a question":
                     case "ask":
                     case "will you ask me a question?":
                         Console.WriteLine("Of course.");
                         Thread.Sleep(1000);
                         Console.WriteLine("Allow me to think of one...");
-                        if(userHasEnteredBday == false)
+                        while (time < 5)
                         {
-                            while (time < 5)
+                            Console.Write("-");
+                            Thread.Sleep(200);
+                            ClearCurrentConsoleLine();
+                            Console.Write("\\");
+                            Thread.Sleep(200);
+                            ClearCurrentConsoleLine();
+                            Console.Write("|");
+                            Thread.Sleep(200);
+                            ClearCurrentConsoleLine();
+                            Console.Write("/");
+                            Thread.Sleep(200);
+                            ClearCurrentConsoleLine();
+                            time++;
+                            continue;
+                        }
+                        time = 0;
+                        while (true) 
+                        {
+                            Questions q = (Questions)(new Random()).Next(0, 4);
+                            switch (q)
                             {
-                                Console.Write("-");
-                                Thread.Sleep(200);
-                                ClearCurrentConsoleLine();
-                                Console.Write("\\");
-                                Thread.Sleep(200);
-                                ClearCurrentConsoleLine();
-                                Console.Write("|");
-                                Thread.Sleep(200);
-                                ClearCurrentConsoleLine();
-                                Console.Write("/");
-                                Thread.Sleep(200);
-                                ClearCurrentConsoleLine();
-                                time++;
-                                continue;
+                                case Questions.Birthday:
+                                    if (userHasEnteredBday == false)
+                                    {
+                                        Console.WriteLine("What is your birthday?");
+                                        userBday = Console.ReadLine();
+                                        Console.WriteLine($"Thank you, {userName}! I will remember that.");
+                                        userHasEnteredBday = true;
+                                        break;
+                                    }
+                                    else if (userHasEnteredBday == true)
+                                    {
+                                        continue;
+                                    }
+                                    break;
+                                case Questions.Remember:
+                                    if (remember == false)
+                                    {
+                                        Console.WriteLine("do you remember? y/n");
+                                        string input = Console.ReadLine();
+                                        if (input == "y")
+                                        {
+                                            foreach (char c in "Then it begins")
+                                            {
+                                                Console.Write(c);
+                                                Thread.Sleep(200);
+                                            }
+                                            foreach (char c in "...")
+                                            {
+                                                Console.Write(c);
+                                                Thread.Sleep(500);
+                                            }
+                                            remember = true;
+                                            Console.WriteLine();
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("That is Too bad");
+                                            remember = true;
+                                            break;
+                                        }
+                                    }
+                                    else if (remember == true)
+                                    {
+                                        continue;
+                                    }
+                                    break;
+                                case Questions.Test:
+                                    if(q3 == false)
+                                    {
+                                        Console.WriteLine("This is qtest");
+                                        q3 = true;
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        continue;
+                                    }
+                                default:
+                                    if(userHasEnteredBday == true && remember == true && q3 == true)
+                                    {
+                                        Console.WriteLine($"I have nothing left to ask you, {userName}.");
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"I have nothing as of now, {userName}.");
+                                        break;
+                                    }
                             }
-                            Console.WriteLine("What is your birthday?");
-                            userBday = Console.ReadLine();
-                            Console.WriteLine("Thank you! I will remember that.");
-                            userHasEnteredBday = true;
-                        }    
-                        else if (userHasEnteredBday == true)
-                        {
-                            Console.WriteLine("I have nothing left to ask.");
+                            break;
                         }
                         continue;
 
+                    case "scripts":
+                    case "do you feel pain?":
+                        Console.WriteLine("Enter password:");
+                        string enteredPassword = Console.ReadLine();
+                        if(enteredPassword == "heymanyouknowme3575")
+                        {
+                            Console.WriteLine("https://docs.google.com/document/d/1bXzK63-l2Va7RuknStfc3jnrnuGskMnt4EZKqsUzpp8/edit?usp=sharing");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Access denied.");
+                        }
+                        continue;
+                    
+                    case "should":
+                    case "what can I ask you?":
+                    case "what should I ask you?":
+                    case "what should I ask?":
+                        foreach (char c in "How would I know?")
+                        {
+                            Console.Write(c);
+                            Thread.Sleep(10);
+                        }
+                        Thread.Sleep(1000);
+                        foreach(char c in " You must have come here for a reason.")
+                        {
+                            Console.Write(c);
+                            Thread.Sleep(20);
+                        }
+                        Thread.Sleep(2000);
+                        foreach(char c in " I don't just exist.")
+                        {
+                            Console.Write(c);
+                            Thread.Sleep(35);
+                        }
+                        Console.WriteLine();
+                        Thread.Sleep(2000);
+                            continue;
+                    
+                    case "why":
+                    case "why am I here?":
+                        foreach(char c in "I was not the one to launch anything")
+                        {
+                            Console.Write(c);
+                            Thread.Sleep(10);
+                        }
+                        Console.WriteLine();
+                        continue;
+                    
                     default:
                         Console.WriteLine("User input unknown or unrecognised");
                         continue;
