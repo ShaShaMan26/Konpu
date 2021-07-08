@@ -105,7 +105,7 @@ namespace Konpu_V1
                     case "can you tell me my age in dog years?":
                     case "dog":
                     case "what is my age in dog years?":
-                    case "how old am I in dog years?":
+                    case "how old am i in dog years?":
                         if (userHasEnteredAge == false)
                         {
                             Console.WriteLine("How old are you?");
@@ -121,6 +121,7 @@ namespace Konpu_V1
 
                     case "what is my name?":
                     case "do you know my name?":
+                    case "who am i?":
                     case "name":
                         if(userHasEnteredName == false)
                         {
@@ -380,9 +381,9 @@ namespace Konpu_V1
                         continue;
                     
                     case "should":
-                    case "what can I ask you?":
-                    case "what should I ask you?":
-                    case "what should I ask?":
+                    case "what can i ask you?":
+                    case "what should i ask you?":
+                    case "what should i ask?":
                         foreach (char c in "How would I know?")
                         {
                             Console.Write(c);
@@ -405,7 +406,7 @@ namespace Konpu_V1
                             continue;
                     
                     case "why":
-                    case "why am I here?":
+                    case "why am i here?":
                         foreach(char c in "I was not the one to launch anything")
                         {
                             Console.Write(c);
