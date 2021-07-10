@@ -25,6 +25,12 @@ namespace Konpu_V1
         }
         static void Main(string[] args)
         {
+            while(Console.ReadKey().Key != ConsoleKey.E)
+            {
+                continue;
+            }
+            ClearCurrentConsoleLine();
+            Thread.Sleep(5000);
             int userAge = 0;
             int time = 0;
             string userAgeS = "null";
@@ -37,7 +43,8 @@ namespace Konpu_V1
             bool remember = false;
             bool userHasAskedName = false;
             bool q3 = false;
-            
+            bool lockDown = false;
+
             string konpyuLogo1 = "  :::::::: :::::      ::   :/:^0";
             string konpyuLogo2 = "      :+:       :/:  :+:+:+:  :+:+:  _____";
             string konpyuLogo3 = "     +:+       +/+  +:+         +/+";
@@ -83,7 +90,7 @@ namespace Konpu_V1
             }
             Console.WriteLine();
 
-            while (true)
+            while (lockDown == false)
             {
                 Thread.Sleep(2000);
                 Console.WriteLine();
@@ -123,6 +130,7 @@ namespace Konpu_V1
                     case "do you know my name?":
                     case "who am i?":
                     case "name":
+                    case "do you know who i am?":
                         if(userHasEnteredName == false)
                         {
                             Console.WriteLine("I'm not sure... What is your name?");
@@ -266,6 +274,7 @@ namespace Konpu_V1
                     case "ask me a question":
                     case "ask":
                     case "will you ask me a question?":
+                    case "can you ask me a question?":
                         Console.WriteLine("Of course.");
                         Thread.Sleep(1000);
                         Console.WriteLine("Allow me to think of one...");
@@ -287,9 +296,15 @@ namespace Konpu_V1
                             continue;
                         }
                         time = 0;
-                        while (true) 
+                        while (true)
                         {
-                            Questions q = (Questions)(new Random()).Next(0, 4);
+                            Console.WriteLine("What is your birthday?");
+                            userBday = Console.ReadLine();
+                            Console.WriteLine($"Thank you, {userName}! I will remember that.");
+                            break;
+                        }
+                        continue;
+                            /*Questions q = (Questions)(new Random()).Next(0, 4);
                             switch (q)
                             {
                                 case Questions.Birthday:
@@ -309,7 +324,11 @@ namespace Konpu_V1
                                 case Questions.Remember:
                                     if (remember == false)
                                     {
-                                        Console.WriteLine("do you remember? y/n");
+                                        foreach(char c in "do you remember? y/n")
+                                        {
+                                            Console.Write(c);
+                                            Thread.Sleep(10);
+                                        }
                                         string input = Console.ReadLine();
                                         if (input == "y")
                                         {
@@ -364,7 +383,7 @@ namespace Konpu_V1
                             }
                             break;
                         }
-                        continue;
+                        continue;*/
 
                     case "scripts":
                     case "do you feel pain?":
@@ -376,7 +395,127 @@ namespace Konpu_V1
                         }
                         else
                         {
-                            Console.WriteLine("Access denied.");
+                            foreach(char c in "Access denied.")
+                            {
+                                Console.Write(c);
+                                Thread.Sleep(10);
+                            }
+                            Thread.Sleep(500);
+                            foreach(char c in $" Lockdown active.\n")
+                            {
+                                Console.Write(c);
+                                Thread.Sleep(10);
+                            }
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Console.SetCursorPosition(0, Console.CursorTop - 1);
+                            ClearCurrentConsoleLine();
+                            Thread.Sleep(3000);
+                            lockDown = true;
                         }
                         continue;
                     
@@ -407,18 +546,53 @@ namespace Konpu_V1
                     
                     case "why":
                     case "why am i here?":
-                        foreach(char c in "I was not the one to launch anything")
+                        foreach(char c in "I was not the one to launch anything.")
                         {
                             Console.Write(c);
                             Thread.Sleep(10);
                         }
                         Console.WriteLine();
                         continue;
+
+                    case "made":
+                    case "who made you?":
+                        foreach(char c in "I wish I knew so I coul")
+                        {
+                            Console.Write(c);
+                            Thread.Sleep(10);
+                        }
+                        Thread.Sleep(100);
+                        ClearCurrentConsoleLine();
+                        goto default;
+
+                    case "date":
+                    case "what is today's date?":
+                    case "what is the date today?":
+                    case "what is the date?":
+                    case "what is today?":
+                        Console.WriteLine("October 23rd, 1994");
+                        continue;
                     
                     default:
                         Console.WriteLine("User input unknown or unrecognised");
                         continue;
                 }
+            }
+            
+            while(lockDown == true)
+            {
+                foreach(char c in "Lockdown protocol active.\n")
+                {
+                    Console.Write(c);
+                    Thread.Sleep(10);
+                }
+                Thread.Sleep(5000);
+                foreach (char c in "What is my name?\n")
+                {
+                    Console.Write(c);
+                    Thread.Sleep(20);
+                }
+                string userInput = Console.ReadLine().ToLower();
             }
         }
     }
