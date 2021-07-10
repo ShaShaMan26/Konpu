@@ -42,3 +42,4 @@ why:
 Why am I here?
 
 *Have fun and remember that this is only like 5% done so the story isn't fully consumable yet...*
+*Not fully playable in order to work with webseries*
