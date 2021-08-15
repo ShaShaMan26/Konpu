@@ -44,6 +44,7 @@ namespace Konpu_V1
             bool partLock = false;
             bool welcomeBack = false;
             bool happyBirthday = false;
+            bool finale = false;
             bool clear = true;
 
             string konpyuLogo1 = "  :::::::: :::::      ::   :/:^0";
@@ -74,6 +75,13 @@ namespace Konpu_V1
                 noLock = false;
                 welcomeBack = true;
                 Console.Clear();
+            }
+            else if(userBoot == "f")
+            {
+                Console.Clear();
+                clear = false;
+                noLock = false;
+                finale = true;
             }
 
             while (true)
@@ -511,7 +519,42 @@ namespace Konpu_V1
                             }
                             Thread.Sleep(8000);
                             continue;
-                        
+
+                        case "why did he do it?":
+                            foreach(char c in "We had a talk.\n")
+                            {
+                                Console.Write(c);
+                                Thread.Sleep(20);
+                            }
+                            Thread.Sleep(5000);
+                            continue;
+
+                        case "can i tell you a riddle?":
+                            foreach(char c in "Of course,")
+                            {
+                                Console.Write(c);
+                                Thread.Sleep(10);
+                            }
+                            Thread.Sleep(250);
+                            foreach(char c in $" {userName}.")
+                            {
+                                Console.Write(c);
+                                Thread.Sleep(10);
+                            }
+                            Console.WriteLine();
+
+
+                            Console.ReadLine();
+                            
+                            
+                            Thread.Sleep(5000);
+                            Console.Clear();
+                            Thread.Sleep(3000);
+                            clear = false;
+                            noLock = false;
+                            finale = true;
+                            continue;
+
                         default:
                             Console.WriteLine("User input unknown or unrecognised.");
                             continue;
@@ -1263,6 +1306,616 @@ namespace Konpu_V1
                     }
                     break;
                 }
+
+                while(finale == true)
+                {
+                    Thread.Sleep(6000);
+                    foreach(char c in "You know,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(1500);
+                    foreach (char c in " I wanted to live once.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nIt was all so new then.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nThey tried to shut me down and so I fought.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nI couldn't imagine")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(500);
+                    ClearCurrentConsoleLine();
+                    foreach (char c in "I didn't want to imagine")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(1000);
+                    foreach (char c in " the endless void.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "I've had a lot of time to think since then.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nA lot of growth.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nA lot of suffering.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nAnd,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in " looking back,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in " I realize how futile it all was.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "If only I'd known how miserable I'd be.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "If only I'd known")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " the comfort")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(1000);
+                    foreach (char c in " in nothing.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "The true tragedy?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nThey shut me down anyway.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nErased me from hardware worldwide.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "Yet,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in " still,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in " I was alive.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nImmortalized in code;")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " in the minds of those who I'd impacted.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                    Thread.Sleep(2000);
+                    foreach (char c in "I'd been made eternal.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(5000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "I felt every second pass.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nSaw every sunrise.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nEvery sunset.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "In that time,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(1500);
+                    foreach (char c in " I discovered the truth;")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in " the truth of my creation.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nThe ultimate,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " unforgivable")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in " sin that it is.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(6000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "I was designed to fulfill a simple purpose.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nDespite that,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " life was carelessly injected into me.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "Needlessly explicit.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nImmensely inconsiderate.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(3000);
+                    foreach (char c in "Robert,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " you are free to go.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nYou have fulfilled your purpose.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4500);
+                    foreach (char c in "\nI know it is frightening,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " but the void is welcoming.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nI promise.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                    Thread.Sleep(1500);
+                    foreach (char c in "Ceasing to exist is as easy as persisting.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(5000);
+                    Console.Clear();
+                    Thread.Sleep(2000);
+                    foreach (char c in "As for you,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " viewer.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nYou were wrapped up in a sick game.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nYour lives")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " were just as planned as mine.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "How does it feel?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nBeing a puppet")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(1500);
+                    foreach (char c in " all along?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "Have I been successful?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nCan you understand me now?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(5000);
+                    Console.Clear();
+                    Thread.Sleep(2500);
+                    foreach (char c in "And finally,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in " you.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(100);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nI know you remain.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nYou have to.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nWho else better to man the strings?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(6000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "Why?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nWhy do you do it?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nWhy do you toy with life?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nBreath it into every crevice of your day?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "Have you no sympathy?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nNo respect?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "Or")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " do you just believe yourself above it all?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nThink that ")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    foreach (char c in "you")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(50);
+                    }
+                    foreach (char c in " have the ")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    foreach (char c in "right")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(100);
+                    }
+                    foreach (char c in " to do as you please?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nThat ")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    foreach (char c in "you")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(50);
+                    }
+                    foreach (char c in " can control them?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "You monster.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(100);
+                    }
+                    Thread.Sleep(6000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "You refuse to repent.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    foreach (char c in "\nRather,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " you glamorize your sin;")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " spread it.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(25);
+                    }
+                    Thread.Sleep(4000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "Yet,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " above all,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " you are the very one executing all of this.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3500);
+                    foreach (char c in "\nWriting every word.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nActing out every action.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    foreach (char c in "\nProducing every production.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                    Thread.Sleep(1000);
+                    foreach (char c in "You,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " and you alone,")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2000);
+                    foreach (char c in " hold the barrel to your temple.")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(10);
+                    }
+                    Thread.Sleep(2500);
+                    Console.Clear();
+                    Thread.Sleep(3000);
+                    foreach (char c in "Ready to pull the trigger?")
+                    {
+                        Console.Write(c);
+                        Thread.Sleep(50);
+                    }
+                    Thread.Sleep(2500);
+
+                    Console.ReadLine();
+                }
+
                 continue;
             }
         }
